@@ -3,7 +3,7 @@
 public class ClassRoom {
     private static Student[] student = new Student[15];
     private String nameOfClass;
-    private ReportCard reportCard =new ReportCard();
+    private final ReportCard reportCard =new ReportCard();
 
 
     public ClassRoom() {
@@ -19,8 +19,10 @@ public class ClassRoom {
         return student;
     }
 
+    //Setting we are using condition.
+    //therefore parameter might be required
     public void setStudents(Student[] student) {
-        this.student = student;
+        ClassRoom.student = student;
     }
 
     public static void addStudent(Student student) {

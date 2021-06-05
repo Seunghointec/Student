@@ -1,8 +1,12 @@
 public class Student {
     private int studentID;
     private String name;
-    private ReportCard reportCard =new ReportCard();
+    private ReportCard reportCard = new ReportCard();
     private static int numberOfStudents;
+    {
+        numberOfStudents++;
+    }
+
 
     public Student() {
         reportCard = new ReportCard();
@@ -12,7 +16,7 @@ public class Student {
         this();
         this.name =name;
         this.studentID = numberOfStudents;
-        numberOfStudents++;
+        //numberOfStudents++;
     }
 
     public int getStudentID() {
