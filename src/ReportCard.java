@@ -12,20 +12,29 @@ public class ReportCard {
        1. grades are added using the addGrade method
        2. constructor with parameter are not used.
            a. because we are already adding grade and getting grades and average using method.
-           b. like student class, we could construct constructor like this*/
+           b. like student class, we could construct constructor like this
+       3. The problem with the creating constructor of array is that
+            a. we need to create an array object
+            b. everytime we create an object of reportCard.
+            c. the code can be repetitive and complicated. */
 
-/*    If we are creating constructor with an array we have two problems
-        1. we already initialized my element line 4.
-        2. ReportCard object was created and the expect parameter value in te new object is array.
-        3. This array parameter becomes unnecessary because reportCard object wll ask for grade
-        4. because reportCard object wll ask for addGrade and getGrade.
-            a. we already recalled methods and loop to recall array parameter
-            b. this becomes duplicate of code
-            c. either create a constructor with an array or create a method*/
-    /*public ReportCard(int[] grades) {
-        grades = new int[] {};
+    /*    If we are creating constructor with an array we have two problems
+            1. we already initialized my element line 4.
+            2. ReportCard object was created and the expect parameter value in te new object is array.
+            3. This array parameter becomes unnecessary because reportCard object wll ask for grade
+            4. because reportCard object wll ask for addGrade and getGrade.
+                a. we already recalled methods and loop to recall array parameter
+                b. this becomes duplicate of code
+                c. either create a constructor with an array or create a method
+            5. Remember, when we use constructor, we are setting initial values in constructor
+    public ReportCard(int grade) {
+        this.grades = grades;
     }
-*/
+
+    public void setGrades(int[] grades) {
+        this.grades = grades;
+    }*/
+
     //getter are returning value (array)
     //when this method is recalled, the returned array will be applied to statement
     public int[] getGrades() {
@@ -69,3 +78,35 @@ public class ReportCard {
         return avg;
     }
 }
+
+
+/* public class ClassHowToDeclareArray{
+    public static void main(String args[]) {
+
+        // Declaring an array of student
+        ReportCard[] reportCard;
+
+        // Allocating memory for 2 objects of type student
+        reportCard = new ReportCard[2];
+
+        // Initializing the first element of the array
+        reportCard[0] = new ReportCard(70);
+
+        // Initializing the second element of the array
+        reportCard[1].addGrade((int) Math.random() * 100);
+
+        // Displaying the student data
+        System.out.println("Student data in student arr 0: ");
+        reportCard[0].display();
+
+        System.out.println("Student data in student arr 1: ");
+        reportCard[1].display();
+    }
+    public void display()
+    {
+        System.out.println("Report card is: " + grades);
+    }
+} */
+
+
+

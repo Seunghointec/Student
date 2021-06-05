@@ -12,6 +12,7 @@ public class Student {
         reportCard = new ReportCard();
     }
 
+    // Creating a student class with id and name as a attributes
     public Student(String name, int studentID) {
         this();
         this.name =name;
@@ -25,5 +26,11 @@ public class Student {
 
     public ReportCard getReportCard() {
         return reportCard;
+    }
+
+    // display() method to display the student data
+    public void display()
+    {
+        System.out.println("Student name is: " + name);
     }
 }
